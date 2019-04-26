@@ -7,7 +7,7 @@ myapp.filter('INR', function () {
 
             var lastThree = result[0].substring(result[0].length - 3);
             var otherNumbers = result[0].substring(0, result[0].length - 3);
-            if (otherNumbers != '')
+            if (otherNumbers != ''&& otherNumbers!= '-')
                 lastThree = ',' + lastThree;
             var output = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
 
